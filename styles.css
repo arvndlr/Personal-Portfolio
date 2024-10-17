@@ -70,15 +70,13 @@ h1 {
     height: 60vh;
     display: flex;
     flex-direction: column;
-    justify-content:space-evenly;
-}
-#home h1 {
-    text-align: center;
-}
-#home p {
+    justify-content: center;
     text-align: center;
 }
 /*About Style*/
+#about h1 {
+    margin-bottom: 2rem;
+}
 #about-education {
     display: flex;
     justify-content: space-around;
