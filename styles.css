@@ -19,7 +19,7 @@ body {
 header {
   background: #333;
   color: #fff;
-  padding: 1rem 1rem;
+  padding: 2em 2em;
   text-align: center;
   display: flex;
   align-items: center;
@@ -73,13 +73,14 @@ nav ul li a:hover {
 /* Main section styles */
 main {
   padding: 2rem 2em;
-  padding-top: 10vh;
+  padding-top: 15vh;
 }
 
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
   text-align: start;
-  font-weight: 500;
+  font-weight: 400;
+  font-style: normal;
 }
 
 article {
@@ -101,6 +102,12 @@ h1 {
 #home p {
   font-weight: 300;
 }
+.profile-pic {
+  height: 200px;
+  width: 200px;
+  align-self: center;
+  border-radius: 50%;
+}
 
 /*About Style*/
 #about h1 {
@@ -109,15 +116,21 @@ h1 {
 #about-education {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
+}
+#about-education-item {
+  padding-left: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 2em;;
 }
 #about-education-item p {
-  text-align: center;
+  text-align: left;
   font-weight: 300;
 }
 #about-education-item h3 {
   font-weight:400;
-  text-align: center;
+  text-align: left;
 }
 
 p {
@@ -132,12 +145,15 @@ p {
   gap: 1.5rem;
   max-width: 1000px;
   margin: auto;
+  
 }
 
 .portfolio-item {
   background: #f4f4f4;
   padding: 1rem;
   border: 1px solid #ddd;
+  margin: 0;
+  border-radius: 20px;
 }
 
 .portfolio-item img {
@@ -162,12 +178,13 @@ p {
 .socmed-container {
   display: flex;
   justify-content: space-evenly;
-  gap: 1em;
+  
 }
 .socmed-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   
 }
 .contact-icon {
@@ -218,8 +235,9 @@ footer {
   /*contact section*/
   .socmed-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+    grid-template-columns: repeat(3, 1fr); /* 2 icons per row */
     gap: 15px;
+  }
 
   /* Show the dropdown menu when active */
   .dropdown_menu {
@@ -259,7 +277,7 @@ footer {
   #about-education-item p {
     text-align: left;
   }
-  #about-education-item h3 {
+  #about-education-item  h3{
     text-align: left;
   }
 }
