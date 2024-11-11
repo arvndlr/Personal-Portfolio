@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const dropdown_menu = document.querySelector(".dropdown_menu");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const dropdownMenu = document.querySelector(".dropdown_menu");
 
-    menuToggle.addEventListener("click", function () {
-      dropdown_menu.classList.toggle("active");
-    });
+  menuToggle.addEventListener("click", function () {
+    dropdownMenu.classList.toggle("active");
   });
+  
+});
