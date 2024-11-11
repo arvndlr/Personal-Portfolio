@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-    scroll-padding-top: 10vh; /* Offset the scroll by the height of the fixed header */
+  scroll-padding-top: 10vh; /* Offset the scroll by the height of the fixed header */
 }
 
 body {
@@ -14,11 +14,12 @@ body {
   line-height: 1.6;
 }
 
+
 /* Header and navigation */
 header {
   background: #333;
   color: #fff;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-align: center;
   display: flex;
   align-items: center;
@@ -49,12 +50,81 @@ nav ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+nav ul li a:hover {
+  color: #153ea7;
+}
+
+/* Responsive Mobile Menu */
+.menu-toggle {
+  display: none; /* hidden by default */
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/*Dropdwn Menu */
+.dropdown_menu{
+  display: none;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  /* Adjust header layout */
+  header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Show the menu toggle */
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+
+  /* Hide the nav menu initially on mobile */
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Show nav menu when active */
+  nav .active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /*contact section*/
+  .socmed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .dropdown_menu {
+    display: none;
+  }
+
+  .dropdown_menu .active{
+    display: flex;
+  }
 }
 
 /* Main section styles */
 main {
   padding: 2rem 2em;
   padding-top: 10vh;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  text-align: start;
+  font-weight: 500;
 }
 
 article {
@@ -67,19 +137,32 @@ h1 {
 }
 /*Home section style*/
 #home {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
+#home p {
+  font-weight: 300;
+}
+
 /*About Style*/
 #about h1 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 #about-education {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#about-education-item p {
+  text-align: center;
+  font-weight: 300;
+}
+#about-education-item h3 {
+  font-weight:400;
+  text-align: center;
 }
 
 p {
@@ -106,18 +189,26 @@ p {
   width: 100%;
   height: auto;
 }
+.portfolio-item p{
+  text-align: start;
+  font-weight: 300;
+}
+.portfolio-item h3 {
+  text-align: start;
+  font-weight: 400;
+}
+
 
 /*Contact section*/
 #contact {
   display: flex;
-  flex-direction: column;;
+  flex-direction: column;
 }
 .socmed-container {
   display: flex;
-  justify-content:start;
+  justify-content: center;
 }
 .socmed-item {
-  width: 150px;
   margin-right: 20px;
   display: flex;
   align-items: center;
@@ -133,5 +224,6 @@ footer {
   background: #333;
   color: #fff;
   text-align: center;
-  padding: 1rem 0;
+  padding: 2em;
+  height: 100px;
 }
