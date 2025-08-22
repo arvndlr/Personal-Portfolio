@@ -85,15 +85,11 @@ h1 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding-inline: 2em;
 }
+
 #home p {
   font-weight: 300;
-}
-.profile-pic {
-  height: 200px;
-  width: 200px;
-  align-self: center;
-  border-radius: 50%;
 }
 
 /*About Style*/
@@ -101,15 +97,15 @@ h1 {
   margin-bottom: 2rem;
 }
 #about-education {
+  padding-inline: 2em;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  gap: 1em;
+  justify-content: space-around;
 }
 #about-education-item {
-  padding-left: 2em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
 }
 #about-education-item p {
   text-align: left;
@@ -122,7 +118,6 @@ h1 {
 
 p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
 }
 
 /* Portfolio grid */
@@ -227,6 +222,11 @@ footer {
     grid-template-columns: repeat(3, 1fr); /* 2 icons per row */
     gap: 15px;
   }
+
+  #about-education {
+  display: flex;
+  flex-direction: column;
+}
 
   #about-education-item {
     display: flex;
