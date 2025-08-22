@@ -14,7 +14,6 @@ body {
   line-height: 1.6;
 }
 
-
 /* Header and navigation */
 header {
   background: #333;
@@ -24,12 +23,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
-  position: fixed;
   width: 100vw;
   height: 10vh;
   top: 0;
   z-index: 1000;
+}
+
+.logo-heading {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.logo {
+  max-width: 50px;
 }
 
 nav {
@@ -56,25 +63,6 @@ nav ul li a:hover {
   color: #153ea7;
 }
 
-/* Responsive Mobile Menu */
-.menu-toggle {
-  display: none; /* hidden by default */
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-/*Dropdwn Menu */
-.dropdown_menu{
-  display: none;
-}
-
-
-
-/* Main section styles */
-main {
-  padding: 2rem 2em;
-  padding-top: 15vh;
-}
 
 .section-title {
   margin-bottom: 32px;
@@ -93,7 +81,6 @@ h1 {
 }
 /*Home section style*/
 #home {
-  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,21 +102,21 @@ h1 {
 }
 #about-education {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: left;
 }
 #about-education-item {
   padding-left: 2em;
   display: flex;
-  flex-direction: row;
-  gap: 2em;;
+  flex-direction: column;
+  gap: 2em;
 }
 #about-education-item p {
   text-align: left;
   font-weight: 300;
 }
 #about-education-item h3 {
-  font-weight:400;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -145,7 +132,6 @@ p {
   gap: 1.5rem;
   max-width: 1000px;
   margin: auto;
-  
 }
 
 .portfolio-item {
@@ -160,7 +146,7 @@ p {
   width: 100%;
   height: auto;
 }
-.portfolio-item p{
+.portfolio-item p {
   text-align: start;
   font-weight: 300;
 }
@@ -168,7 +154,6 @@ p {
   text-align: start;
   font-weight: 400;
 }
-
 
 /*Contact section*/
 #contact {
@@ -178,14 +163,12 @@ p {
 .socmed-container {
   display: flex;
   justify-content: space-evenly;
-  
 }
 .socmed-item {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  
 }
 .contact-icon {
   height: 50px;
@@ -205,20 +188,22 @@ footer {
 @media (max-width: 768px) {
   /* Adjust header layout */
   header {
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: fit-content;
+    box-sizing: border-box;
   }
 
-  /* Show the menu toggle */
-  .menu-toggle {
-    display: block;
-    color: #fff;
+  .logo-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
   }
 
   /* Hide the nav menu initially on mobile */
   nav {
-    display: none;
     flex-direction: column;
     width: 100%;
   }
@@ -226,6 +211,10 @@ footer {
   /* Show nav menu when active */
   nav .active {
     display: flex;
+  }
+
+  nav ul {
+    justify-content: space-evenly;
   }
 
   nav ul li {
@@ -239,37 +228,7 @@ footer {
     gap: 15px;
   }
 
-  /* Show the dropdown menu when active */
-  .dropdown_menu {
-    display: none; /* hidden initially */
-    flex-direction: column;
-    padding: 20px;
-    background-color: #333;
-    width: 100%;
-  }
-
-  .dropdown_menu ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-  }
-
-  .dropdown_menu ul li {
-    margin: 10px 0;
-  }
-
-  .dropdown_menu ul li a {
-    color: #fff;
-  }
-
-  /* Display dropdown menu when active */
-  .dropdown_menu.active {
-    position: fixed;
-    padding-top: 10vh;
-    display: flex;
-  }
-
-  #about-education-item{
+  #about-education-item {
     display: flex;
     flex-direction: column;
     text-align: start;
@@ -277,7 +236,7 @@ footer {
   #about-education-item p {
     text-align: left;
   }
-  #about-education-item  h3{
+  #about-education-item h3 {
     text-align: left;
   }
 }
