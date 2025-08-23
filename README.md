@@ -8,4 +8,4 @@ This use HTML for structure and CCS for layout and design. In designing layout I
 
 <hr>
 
-Visit my basic HTML website here: [https://basic-html-website-one.vercel.app/](https://basic-html-website-one.vercel.app/)
+Visit my basic HTML website here: [https://personal-portfolio-jet-omega.vercel.app/](https://personal-portfolio-jet-omega.vercel.app/)
