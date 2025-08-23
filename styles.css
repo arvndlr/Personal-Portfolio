@@ -28,7 +28,6 @@ header {
   height: 10vh;
   top: 0;
   z-index: 1000;
-  
 }
 
 .logo-heading {
@@ -65,7 +64,6 @@ nav ul li a:hover {
   color: #153ea7;
 }
 
-
 .section-title {
   margin-bottom: 32px;
   text-align: start;
@@ -100,11 +98,10 @@ h1 {
   margin-bottom: 2rem;
 }
 #about-education {
-  padding-inline: 2em;
   display: flex;
   flex-direction: row;
   gap: 1em;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 #about-education-item {
   display: flex;
@@ -116,7 +113,7 @@ h1 {
   border-bottom: #333 solid 1px;
 }
 #about-education-item h3 {
-  font-weight: 10;
+  font-weight: 400;
   text-align: left;
 }
 
@@ -152,6 +149,26 @@ p {
 .portfolio-item h3 {
   text-align: start;
   font-weight: 400;
+}
+
+/*Article Stylin*/
+.section-container {
+  padding-inline: 4em;
+  padding-block: 2em;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 2em;
+}
+.cards p {
+  font-size: medium;
+}
+.card-container {
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 /*Contact section*/
@@ -230,14 +247,15 @@ footer {
   /*contact section*/
   .socmed-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 icons per row */
+    grid-template-columns: repeat(5, 1fr); /* 2 icons per row */
     gap: 15px;
+    padding-block: 0.5em;
   }
 
   #about-education {
-  display: flex;
-  flex-direction: column;
-}
+    display: flex;
+    flex-direction: column;
+  }
 
   #about-education-item {
     display: flex;
@@ -250,10 +268,26 @@ footer {
   #about-education-item h3 {
     text-align: center;
   }
-
+  /*Article Mobile Style*/
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    gap: 1em;
+  }
+  .section-container {
+    padding-inline: 2em;
+    padding-block: 1em;
+  }
   /*Home Mobile Style*/
   #home {
     height: fit-content;
     padding-block: 16px;
+  }
+  /*Footer Style*/
+  .footer-details {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
