@@ -176,6 +176,30 @@ p {
   display: flex;
   flex-direction: column;
 }
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.form {
+  width: 100%;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1em;
+}
+#contact-form textarea {
+  height: 100px;
+  width: 50%;
+}
+#contact-form button {
+  padding: 1em;
+  border-radius: 10px;
+}
 .socmed-container {
   display: flex;
   justify-content: space-evenly;
@@ -278,6 +302,16 @@ footer {
   .section-container {
     padding-inline: 2em;
     padding-block: 1em;
+  }
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+  }
+  #contact-form textarea {
+    height: 100px;
+    width: 100%;
   }
   /*Home Mobile Style*/
   #home {

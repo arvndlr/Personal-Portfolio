@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/arvin-icon" href="/images/arvin-favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arvin Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -186,12 +187,42 @@
       <!-- Contact Section -->
       <section class="section-container" id="contact">
         <h2>Contact</h2>
-        <div class="socmed-item">
-          <a href="mailto:arvin.dlrys@gmail.com" target="_blank"
-            ><img class="contact-icon" src="images/gmail.png" alt="Gmail"
-          /></a>
-          <p>Gmail</p>
-        </div>
+        <section class="contact-form">
+          <form id="contact-form" class="form" data-form>
+            <div class="input-wrapper">
+              <input
+                type="text"
+                name="name"
+                class="form-input"
+                placeholder="Full name"
+                required
+                data-form-input
+              />
+
+              <input
+                type="email"
+                name="email"
+                class="form-input"
+                placeholder="Email address"
+                required
+                data-form-input
+              />
+            </div>
+
+            <textarea
+              name="message"
+              class="form-input"
+              placeholder="Your Message"
+              required
+              data-form-input
+            ></textarea>
+
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
       </section>
     </main>
     <!-- Footer -->
